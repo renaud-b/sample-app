@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Contract Invocation</title><!-- Inclusion du CSS on-chain :
+        La route "/g/{identifiant_du_graph_css}" permet de récupérer un fichier CSS stocké directement sur la blockchain.
+        Cela garantit que le style de l'application est distribué et accessible via n'importe quel nœud du réseau Utopixia. -->
+    <link href="/g/d928ae43-acca-4474-9483-30563747fb82" rel="stylesheet" />
+</head>
+
+<body>
+<h2>Test Smart Contract Invocation</h2>
+<p>Use this form to call the <b>SayHello</b> function in <i>js/backend.js</i>.</p><label for="name">Enter your name:</label><input id="name" placeholder="Your name" type="text" value="test" /><label for="count">Enter count:</label><input id="count" type="number" min="1" value="5" /><button onclick="callSmartContract()">Call Smart Contract</button>
+<h3>Response:</h3>
+<pre id="output">Waiting for response...</pre><!-- Inclusion du JavaScript on-chain :
+        La route "/parser/graph/javascript/{identifiant_du_graph_js}" permet de récupérer un script stocké sur la blockchain.
+        Cela signifie que le code frontend peut être distribué et exécuté sans dépendre d’un serveur centralisé. -->
+<script src="/parser/graph/javascript/e63ecc52-9ce5-4dec-aeec-ed7fb7590aca"></script>
+</body>
+
+</html>
